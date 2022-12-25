@@ -44,41 +44,7 @@ void max1415::ChipConfig()
   digitalWrite(ChipSelect,HIGH); // Disable ADC SPI
 }
 
-int max1415::GetReading()
-{
-/*
-  int Amount = 0;
-  int Total = 0;
-  int Min;
-  int Max;
-  int Values[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-  
-  for(int i = 0; i < 8; i++)
-  {
-    WaitForData();
-    int x = GetReadingNumber();
-    Total += x;
-    Values[Amount] = x;
-    Amount++;
-  }
-
-  if((max(Values) - min(Values)) > 8)
-  {
-    for(int i = 0; i < 6; i++)
-    {
-      WaitForData();
-      int x = GetReadingNumber();
-      Total += x;
-      Values[Amount] = x;
-      Amount++;
-    }
-  }
-
-  return(Total / Amount);
-  */
-}
-
-unsigned int max1415::GetReadingNumber()
+unsigned int max1415::GetReading()
 {
   unsigned int uiData;
   byte highByte;
