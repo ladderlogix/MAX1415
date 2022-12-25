@@ -14,7 +14,7 @@ class max1415
 	max1415(int CS, int Select);
 	void ADCSerialInt();
 	void ChipConfig();
-	int GetReading();
+	unsigned int GetReading();
 	void WaitForData();
 
 };
